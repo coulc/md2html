@@ -100,7 +100,7 @@ md2html/
 ├── go.sum            # Dependencies checksum
 ├── templates/        # Custom templates directory (optional)
 │   ├── layout.html   # HTML layout template
-│   └── style.css     # CSS styles template
+│   └── style.tmpl    # CSS styles template
 ├── content/          # Default input directory (Markdown files)
 └── html/             # Default output directory (generated HTML)
 ```
@@ -129,7 +129,7 @@ overwrite: false
 extensions: .txt,.mdx
 template:
   layout: ./templates/layout.html
-  style: ./templates/style.css
+  style: ./templates/style.tmpl
 ```
 
 **Note**: Command line options override configuration file settings.
@@ -162,7 +162,7 @@ template:
 </html>
 ```
 
-### Style Template (style.css)
+### Style Template (style.tmpl)
 
 ```css
 body {

@@ -5,7 +5,6 @@
 ## 项目简介
 
 md2html 是一个命令行工具，用于批量将 Markdown 文件转换为 HTML。支持目录遍历、链接重写、自定义模板和并发处理，适合构建静态网站、文档站点或个人博客。
-
 ## 功能特性
 
 - **Markdown 转 HTML**：使用 `blackfriday/v2` 进行快速可靠的 Markdown 解析
@@ -99,7 +98,7 @@ md2html/
 ├── go.sum            # 依赖校验和
 ├── templates/        # 自定义模板目录（可选）
 │   ├── layout.html   # HTML 布局模板
-│   └── style.css     # CSS 样式模板
+│   └── style.tmpl    # CSS 样式模板
 ├── content/          # 默认输入目录（存放 Markdown 文件）
 └── html/             # 默认输出目录（生成的 HTML 文件）
 ```
@@ -128,7 +127,7 @@ overwrite: false
 extensions: .txt,.mdx
 template:
   layout: ./templates/layout.html
-  style: ./templates/style.css
+  style: ./templates/style.tmpl
 ```
 
 **注意**：命令行选项优先级高于配置文件设置。
@@ -161,7 +160,7 @@ template:
 </html>
 ```
 
-### 样式模板 (style.css)
+### 样式模板 (style.tmpl)
 
 ```css
 body {
