@@ -1,0 +1,10 @@
+input: ./content
+output: ./html
+recursive: true
+overwrite: true
+
+template:
+  layout: ./static/layout/layout.html
+  style: ./static/style/style.tmpl
+
+extensions: .md,.txt
